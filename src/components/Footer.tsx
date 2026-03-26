@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Zap } from "lucide-react";
 
 const quickLinks = [
@@ -21,20 +22,19 @@ export default function Footer() {
     <footer className="bg-[#171717] text-white">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid gap-10 md:grid-cols-12">
+          {/* Brand */}
           <div className="md:col-span-5">
-            <div className="flex items-center gap-3">
-              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#0A6847] shadow-md shadow-[#0A6847]/20">
-                <Zap size={22} className="text-[#F5D800]" />
+            <a href="#home" className="flex items-center">
+              <div className="relative h-[68px] w-[240px] overflow-hidden sm:h-[76px] sm:w-[280px]">
+                <Image
+                  src="/logo.png"
+                  alt="Nexus Energy Advisors"
+                  fill
+                  className="object-contain object-left scale-[1.12]"
+                  sizes="(max-width: 640px) 240px, 280px"
+                />
               </div>
-              <div className="leading-none">
-                <p className="text-2xl font-extrabold tracking-tight text-white">
-                  Nexus
-                </p>
-                <p className="mt-1 text-[11px] font-semibold uppercase tracking-[0.22em] text-gray-400">
-                  Energy Advisors
-                </p>
-              </div>
-            </div>
+            </a>
 
             <p className="mt-5 max-w-md text-sm leading-7 text-gray-400">
               Expert energy advisory services for UK businesses. Reduce costs,
@@ -43,6 +43,7 @@ export default function Footer() {
             </p>
           </div>
 
+          {/* Quick Links */}
           <div className="md:col-span-3 md:col-start-7">
             <h4 className="text-sm font-semibold uppercase tracking-[0.18em] text-white/90">
               Quick Links
@@ -61,6 +62,7 @@ export default function Footer() {
             </ul>
           </div>
 
+          {/* Services */}
           <div className="md:col-span-2">
             <h4 className="text-sm font-semibold uppercase tracking-[0.18em] text-white/90">
               Services
