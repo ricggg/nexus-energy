@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Zap } from "lucide-react";
 
 const quickLinks = [
@@ -23,13 +22,20 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid gap-10 md:grid-cols-12">
           <div className="md:col-span-5">
-            <Image
-              src="/logo.png"
-              alt="Nexus Energy Advisors"
-              width={220}
-              height={70}
-              className="h-14 w-auto rounded-md bg-white p-2"
-            />
+            <div className="flex items-center gap-3">
+              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#0A6847] shadow-md shadow-[#0A6847]/20">
+                <Zap size={22} className="text-[#F5D800]" />
+              </div>
+              <div className="leading-none">
+                <p className="text-2xl font-extrabold tracking-tight text-white">
+                  Nexus
+                </p>
+                <p className="mt-1 text-[11px] font-semibold uppercase tracking-[0.22em] text-gray-400">
+                  Energy Advisors
+                </p>
+              </div>
+            </div>
+
             <p className="mt-5 max-w-md text-sm leading-7 text-gray-400">
               Expert energy advisory services for UK businesses. Reduce costs,
               improve efficiency, and build a sustainable future with Nexus

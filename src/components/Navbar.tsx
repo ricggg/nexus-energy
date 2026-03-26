@@ -2,8 +2,7 @@
 
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Menu, Phone, X } from "lucide-react";
-import Image from "next/image";
+import { Menu, Phone, X, Zap } from "lucide-react";
 
 const navLinks = [
   { label: "Home", href: "#home" },
@@ -20,15 +19,18 @@ export default function Navbar() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-black/5 bg-white/95 backdrop-blur-md">
       <div className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <a href="#home" className="flex items-center">
-          <Image
-            src="/logo.png"
-            alt="Nexus Energy Advisors"
-            width={220}
-            height={70}
-            priority
-            className="h-12 w-auto sm:h-14"
-          />
+        <a href="#home" className="flex items-center gap-3">
+          <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#0A6847] shadow-md shadow-[#0A6847]/20">
+            <Zap size={20} className="text-[#F5D800]" />
+          </div>
+          <div className="leading-none">
+            <p className="text-xl font-extrabold tracking-tight text-[#171717]">
+              Nexus
+            </p>
+            <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-gray-500">
+              Energy Advisors
+            </p>
+          </div>
         </a>
 
         <nav className="hidden items-center gap-8 lg:flex">
