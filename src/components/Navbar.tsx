@@ -20,16 +20,23 @@ export default function Navbar() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-black/5 bg-white/95 backdrop-blur-md">
       <div className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <a href="#home" className="flex items-center">
-          <div className="relative h-[68px] w-[240px] overflow-hidden sm:h-[76px] sm:w-[280px]">
+        <a href="#home" className="flex items-center gap-3">
+          <div className="relative h-[56px] w-[90px] overflow-hidden sm:h-[62px] sm:w-[105px]">
             <Image
               src="/logo.png"
               alt="Nexus Energy Advisors"
               fill
               priority
-              className="object-contain object-left scale-[1.12]"
-              sizes="(max-width: 640px) 240px, 280px"
+              className="object-contain object-left"
+              sizes="(max-width: 640px) 90px, 105px"
             />
+          </div>
+
+          <div className="leading-none">
+            <div className="h-[24px] sm:h-[28px]" />
+            <p className="mt-1 text-[10px] font-semibold uppercase tracking-[0.24em] text-gray-500 sm:text-[11px]">
+              
+            </p>
           </div>
         </a>
 
